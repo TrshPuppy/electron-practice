@@ -2,7 +2,7 @@
   "name": "electron-practice",
   "version": "1.0.0",
   "description": "for practicing Electron to build apps",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
