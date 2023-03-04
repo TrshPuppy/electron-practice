@@ -1,19 +1,29 @@
-const { app, BrowserWindow } = require("electron"); //Event based API
+const { app, BrowserWindow, ipcMain } = require("electron"); //Event based API
 const path = require("path");
+const fs = require("fs");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+// Keep window global to prevent closure when JS Object is "garbage collected":
+let win;
+
 const createWindow = () => {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  // Create the browser window (SECURELY).
+  win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      // preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
+      // Default is false since v5
+      nodeIntegration: false,
+      // Protects against prototype pollution:
+      contextIsolation: true,
+      // Disable remote:
+      enableRemoteModule: false,
+      // Use a preload script:
+      preload: path.joun(__dirname, "preload.js"),
     },
   });
 
