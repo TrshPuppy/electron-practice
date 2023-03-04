@@ -7,6 +7,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 500,
     height: 500,
+    title: "test",
     webPreferences: {
       // turn off nodeIntegrations:
       nodeIntegration: false,
@@ -18,6 +19,8 @@ const createWindow = () => {
       preload: path.join(__dirname, "preload.js"),
     },
   });
+
+  mainWindow.loadFile("index.html");
 };
 
 app.on("ready", createWindow);
