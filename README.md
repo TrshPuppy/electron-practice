@@ -6,6 +6,28 @@ To ensure best practice w/ security in mind, the tutorial I will base this repo 
 
 Enjoy!
 
+## Setup:
+
+```
+npm init
+```
+
+Install `electron` package into `devDependencies`.
+
+```
+npm install --save-dev electron
+```
+
+In `package.json` add `start` command (opens app in development mode):
+
+```JSON
+{
+    "scripts":{
+        "start":"electron ."
+    }
+}
+```
+
 ## Lessons Learned:
 
 ### Node Integrations Security risk
