@@ -1,6 +1,8 @@
 # Practice Electron App
 
-This repo is for me to practice making an app using [Electron](https://www.electronjs.org/). The tutorial I will follow can be found [here](https://www.youtube.com/watch?v=3yqDxhR2XxE&ab_channel=Fireship).
+This repo is for me to practice making an app using [Electron](https://www.electronjs.org/). ~~The tutorial I will follow can be found [here](https://www.youtube.com/watch?v=3yqDxhR2XxE&ab_channel=Fireship).~~
+
+To ensure best practice w/ security in mind, the tutorial I will base this repo on can be found in [here](https://www.electronjs.org/docs/latest/tutorial/quick-start)
 
 Enjoy!
 
